@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # 1. Modelni yuklash (Siz ko'rsatgan pkl fayli)
-bundle = joblib.load(r"C:\Users\user\Desktop\Elyor\knn_oqitildi.pkl")
+bundle = joblib.load("knn_oqitildi.pkl")
 model = bundle['model']
 best_cols = bundle['ustunlar']
 label_map = bundle['label_map']
@@ -67,3 +67,4 @@ if st.button("Janrni aniqlash"):
         st.success(f"Bashorat: {predicted_genre} 🎻")
     else:
         st.warning(f"Bashorat: {predicted_genre}")
+
